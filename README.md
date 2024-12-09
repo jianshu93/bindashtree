@@ -1,7 +1,15 @@
-## Build genome tree via Binwise Densified MinHash and Rapid Neighbor-joining
+## Build genome phylogenetic tree via Binwise Densified MinHash and Rapid Neighbor-joining
+One Permutation Hashing with Optimal Densification (1,2) can be use for genomic distance estimation (1-ANI) and then we can perform rapid Neighbor-joining (4) based on the genomic distance. We also provided a new densification strategy called faster densification (or reverse optimal densification) (3), which is more accurate and faster for large sketch size.
 
 ## Install
 ```bash
+### Pre-built library (Linux only)
+wget https://github.com/jianshu93/bindashtree/releases/download/v0.1.0/bindashtree_Linux_86-64_v0.1.0.zip
+unzip bindashtree_Linux_86-64_v0.1.0.zip
+chmod a+x ./bindashtree
+./bindashtree -h
+
+### compling from source
 git clone https://github.com/jianshu93/bindashtree.git
 cd bindashtree
 cargo build --release
@@ -44,12 +52,16 @@ Options:
           Print version
 
 ```
+## Output explanation
+
+A newick format tree and phylip format distance matrix will be the output depending on your options. 
+
 
 ## Testing dataset
 
 ```bash
 ls ./data/*.fna.gz > name.txt
-./target/release/bindashtree -i name.txt -k 16 -s 12000 -d 1 -t 8 --output_tree try.nwk
+./target/release/bindashtree -i name.txt -k 16 -s 10240 -d 1 -t 8 --output_tree try.nwk
 ```
 
 ## References
