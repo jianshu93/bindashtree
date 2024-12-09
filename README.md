@@ -48,7 +48,7 @@ Options:
 ## Testing dataset
 
 ```bash
-ls ../../data/*.fna.gz > name.txt
+ls ./data/*.fna.gz > name.txt
 ./target/release/bindashtree -i name.txt -k 16 -s 12000 -d 1 -t 8 --output_tree try.nwk
 ```
 
