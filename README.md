@@ -31,7 +31,7 @@ Options:
   -k, --kmer_size <KMER_SIZE>
           K-mer size [default: 16]
   -s, --sketch_size <SKETCH_SIZE>
-          MinHash sketch size [default: 2048]
+          MinHash sketch size [default: 10240]
   -d, --densification <DENS_OPT>
           Densification strategy: 0=Optimal Densification, 1=Reverse Optimal Densification/faster Densification [default: 0]
   -t, --threads <THREADS>
