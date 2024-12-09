@@ -268,7 +268,7 @@ fn main() {
                 .long("sketch_size")
                 .value_name("SKETCH_SIZE")
                 .help("MinHash sketch size")
-                .default_value("2048")
+                .default_value("10240")
                 .value_parser(clap::value_parser!(usize))
                 .action(ArgAction::Set),
         )
