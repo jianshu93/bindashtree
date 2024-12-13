@@ -1,14 +1,33 @@
+[![install with bioconda](https://img.shields.io/badge/install%20with-bioconda-brightgreen.svg?style=flat)](http://bioconda.github.io/recipes/bindashtree/README.html)
+![](https://anaconda.org/bioconda/bindashtree/badges/license.svg)
+![](https://anaconda.org/bioconda/bindashtree/badges/version.svg)
+![](https://anaconda.org/bioconda/bindashtree/badges/latest_release_relative_date.svg)
+![](https://anaconda.org/bioconda/bindashtree/badges/platforms.svg)
+
+
+
 ## Build genome phylogenetic tree via Binwise Densified MinHash and Rapid Neighbor-joining
-One Permutation Hashing with Optimal Densification (1,2) can be use for genomic distance estimation (1-ANI) and then we can perform rapid Neighbor-joining (4) based on the genomic distance. We also provided a new densification strategy called faster densification (or reverse optimal densification) (3), which is more accurate and faster for large sketch size.
+One Permutation Hashing with Optimal Densification (1,2) can be use for genomic distance estimation (1-ANI) and then we can perform rapid neighbor-joining (4) based on the genomic distance. We also provided a new densification strategy called faster densification (or reverse optimal densification) (3), which is more accurate and faster for large sketch size (5).
 
 ## Install
+
+### Install via bioconda
+
+```bash
+conda install -c bioconda -c conda-forge bindashtree
+
+```
+### Pre-built binary
 ```bash
 ### Pre-built library (Linux only)
 wget https://github.com/jianshu93/bindashtree/releases/download/v0.1.0/bindashtree_Linux_86-64_v0.1.0.zip
 unzip bindashtree_Linux_86-64_v0.1.0.zip
 chmod a+x ./bindashtree
 ./bindashtree -h
+```
 
+### Install from source
+```bash
 ### compling from source
 git clone https://github.com/jianshu93/bindashtree.git
 cd bindashtree
@@ -54,7 +73,7 @@ Options:
 ```
 ## Output explanation
 
-A newick format tree and phylip format distance matrix will be the output depending on your options. 
+A newick format tree and phylip format distance matrix will be the output depending on your options. Tree can be visualized via [Figtree](http://tree.bio.ed.ac.uk/software/figtree/), [iTOL](https://itol.embl.de) or [ggtree](https://guangchuangyu.github.io/software/ggtree/)
 
 
 ## Testing dataset
@@ -73,3 +92,5 @@ ls ./data/*.fna.gz > name.txt
 3.Mai, T., Rao, A., Kapilevich, M., Rossi, R., Abbasi-Yadkori, Y. and Sinha, R., 2020, August. On densification for minwise hashing. In Uncertainty in Artificial Intelligence (pp. 831-840). PMLR.
 
 4.Simonsen, M., Mailund, T. and Pedersen, C.N., 2008. Rapid neighbour-joining. In Algorithms in Bioinformatics: 8th International Workshop, WABI 2008, Karlsruhe, Germany, September 15-19, 2008. Proceedings 8 (pp. 113-122). Springer Berlin Heidelberg.
+
+5.Zhao, J., Zhao, X., Pierre-Both, J. and Konstantinidis, K.T., 2024. BinDash 2.0: new MinHash scheme allows ultra-fast and accurate genome search and comparisons. bioRxiv, pp.2024-03.
