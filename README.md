@@ -80,6 +80,8 @@ A newick format tree and phylip format distance matrix will be the output depend
 
 ```bash
 ls ./data/*.fna.gz > name.txt
+
+#### for highly similar genomes, e.g., > 99.9% ANI, a large sketch size should be used. -s 10204 works well for ANI below 99%.
 ./target/release/bindashtree -i name.txt -k 16 -s 10240 -d 1 -t 8 --output_tree try.nwk
 ```
 
