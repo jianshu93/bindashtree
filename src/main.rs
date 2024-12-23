@@ -176,6 +176,11 @@ fn build_distance_matrix(
                     let query_signature = &sketches[&genomes[i]];
                     let reference_signature = &sketches[&genomes[j]];
                     let hamming_distance = dist_hamming.eval(query_signature, reference_signature);
+                    let hamming_distance = if hamming_distance == 0.0 {
+                        std::f32::EPSILON // Use a small value close to zero
+                    } else {
+                        hamming_distance
+                    };
                     let jaccard = 1.0 - hamming_distance;
                     let numerator = 2.0 * jaccard;
                     let denominator = 1.0 + jaccard;
@@ -241,14 +246,14 @@ fn main() {
     println!("\n ************** initializing logger *****************\n");
     let _ = env_logger::Builder::from_default_env().init();
     let matches = Command::new("BinDashtree")
-        .version("0.2.0")
+        .version("0.1.0")
         .about("Binwise Densified MinHash and Rapid Neighbor-joining Tree Construction")
         .arg(
             Arg::new("input_list")
                 .short('i')
                 .long("input")
                 .value_name("INPUT_LIST_FILE")
-                .help("Genome list file (one FASTA/FNA file per line), gz supported")
+                .help("Genome list file (one FASTA/FNA file per line), .gz supported")
                 .required(true)
                 .action(ArgAction::Set),
         )
