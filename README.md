@@ -19,6 +19,12 @@ One Permutation Hashing with Optimal Densification (1,2) can be use for genomic 
 conda install -c bioconda -c conda-forge bindashtree
 
 ```
+### install via cargo
+```bash
+### Install from cargo, install Rustup first here: https://rustup.rs, cargo will be installed by default
+cargo install bindashtree
+```
+
 ### Pre-built binary
 ```bash
 ### Pre-built library (Linux only)
