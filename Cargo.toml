@@ -2,6 +2,9 @@
 name = "bindashtree"
 version = "0.1.1"
 edition = "2021"
+keywords = ["genome", "minhash", "tree"]
+license = "MIT OR Apache-2.0"
+description = "MinHash based phylogenomics via neighbor joining"
 
 [dependencies]
 clap = "4.3"
