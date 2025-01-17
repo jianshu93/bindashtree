@@ -1,7 +1,8 @@
 [package]
 name = "bindashtree"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
+repository = "https://github.com/jianshu93/bindashtree"
 keywords = ["genome", "minhash", "tree"]
 license = "MIT OR Apache-2.0"
 description = "MinHash based phylogenomics via neighbor joining"

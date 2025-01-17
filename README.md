@@ -3,7 +3,7 @@
 ![](https://anaconda.org/bioconda/bindashtree/badges/version.svg)
 ![](https://anaconda.org/bioconda/bindashtree/badges/latest_release_relative_date.svg)
 ![](https://anaconda.org/bioconda/bindashtree/badges/platforms.svg)
-
+[![install with conda](https://anaconda.org/bioconda/bindashtree/badges/downloads.svg)](https://anaconda.org/bioconda/bindashtree)
 
 
 ## Build genome phylogenetic tree via Binwise Densified MinHash and Rapid Neighbor-joining
