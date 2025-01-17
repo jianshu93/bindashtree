@@ -20,7 +20,7 @@ conda install -c bioconda -c conda-forge bindashtree
 ### Pre-built binary
 ```bash
 ### Pre-built library (Linux only)
-wget https://github.com/jianshu93/bindashtree/releases/download/v0.1.0/bindashtree_Linux_86-64_v0.1.0.zip
+https://github.com/jianshu93/bindashtree/releases/download/v0.1.1/bindashtree_Linux_x86-64_v0.1.1.zip
 unzip bindashtree_Linux_86-64_v0.1.0.zip
 chmod a+x ./bindashtree
 ./bindashtree -h
