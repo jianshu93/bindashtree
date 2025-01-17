@@ -246,7 +246,7 @@ fn main() {
     println!("\n ************** initializing logger *****************\n");
     let _ = env_logger::Builder::from_default_env().init();
     let matches = Command::new("BinDashtree")
-        .version("0.1.0")
+        .version("0.1.1")
         .about("Binwise Densified MinHash and Rapid Neighbor-joining Tree Construction")
         .arg(
             Arg::new("input_list")
