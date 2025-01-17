@@ -5,6 +5,8 @@
 ![](https://anaconda.org/bioconda/bindashtree/badges/platforms.svg)
 [![install with conda](https://anaconda.org/bioconda/bindashtree/badges/downloads.svg)](https://anaconda.org/bioconda/bindashtree)
 
+[![Latest Version](https://img.shields.io/crates/v/bindashtree?style=for-the-badge&color=mediumpurple&logo=rust)](https://crates.io/crates/bindashtree)
+[![docs.rs](https://img.shields.io/docsrs/bindashtree?style=for-the-badge&logo=docs.rs&color=mediumseagreen)](https://docs.rs/hypermash/latest/bindashtree/)
 
 ## Build genome phylogenetic tree via Binwise Densified MinHash and Rapid Neighbor-joining
 One Permutation Hashing with Optimal Densification (1,2) can be use for genomic distance estimation (1-ANI) and then we can perform rapid neighbor-joining (4) based on the genomic distance. We also provided a new densification strategy called faster densification (or reverse optimal densification) (3), which is more accurate and faster for large sketch size (5).
